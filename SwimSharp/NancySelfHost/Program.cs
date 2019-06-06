@@ -7,6 +7,8 @@ using Akka.DI.Core;
 using Autofac;
 using Serilog;
 using System;
+using SwimSharp.Extensions;
+using System.Linq;
 
 namespace NancySelfHost
 {
@@ -49,6 +51,7 @@ namespace NancySelfHost
         {
             Receive<string>(message => {
                 logger.Information($"Got message {message}");
+
             });
         }
 
