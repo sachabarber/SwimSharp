@@ -12,9 +12,9 @@ namespace SwimSharp
         public static List<Member> TakeRandom(List<Member> member, int howMany) 
             => member.Shuffle().Take(howMany).ToList();
 
-        public static void ScheduleOnce(TimeSpan delay, IActorRef receiver, object message, Akka.Actor.IScheduler scheduler)
+        public static ICancelable ScheduleOnce(TimeSpan delay, IActorRef receiver, object message, Akka.Actor.IScheduler scheduler)
         {
-            scheduler.ScheduleTellOnce(delay, receiver, message, ActorRefs.NoSender);
+            return scheduler.ScheduleTellOnceCancelable(delay, receiver, message, ActorRefs.NoSender);
         }
 
         public static void Schedule(TimeSpan interval, IActorRef receiver, object message, Akka.Actor.IScheduler scheduler)
