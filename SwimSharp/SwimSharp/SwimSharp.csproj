@@ -14,7 +14,7 @@
     <PackageReference Include="Nancy" Version="2.0.0" />
     <PackageReference Include="Nancy.Bootstrappers.Autofac" Version="2.0.0-clinteastwood" />
     <PackageReference Include="Nancy.Hosting.Self" Version="2.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00798" />
   </ItemGroup>
 
